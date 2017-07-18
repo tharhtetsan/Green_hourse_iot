@@ -21,10 +21,10 @@ restService.use(bodyParser.json());
 
 restService.post('/Action', function(req, res) {
 
-    var Action_Name=req.body.result;
+    var Action_Name=req.body.result.action;
 
                      var sql = "";
-                      var speech=req.body.result+"";
+                      var speech=eq.body.result.action+"";
 
                  if(Action_Name=="Heating Bulb Off")
                  {
