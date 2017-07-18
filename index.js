@@ -26,38 +26,38 @@ restService.post('/Action', function(req, res) {
                      var sql = "";
                       var speech=eq.body.result+"\t___"
 
-                 if(Action_Name=="Act_Heating_Bulb_Off")
+                 if(Action_Name=="Act Heating Bulb Off")
                  {
                   sql="Update action_tb set act_1_status=0 where Mid='ths';";
                  }
-                 else if(Action_Name=="Act_Heating_Bulb_On")
+                 else if(Action_Name=="Act Heating Bulb On")
                  {
                   sql="Update action_tb set act_1_status=1 where Mid='ths';";
                 
                  }
-                 else if(Action_Name=="Act_Humidity_Off")
+                 else if(Action_Name=="Act Humidity Off")
                  {
                     sql="Update action_tb set act_2_status=0 where Mid='ths';";
                  }
-                 else if(Action_Name=="Act_Humidity_On")
+                 else if(Action_Name=="Act Humidity On")
                  {
                     sql="Update action_tb set act_2_status=1 where Mid='ths';";
                 
                  }
-                 else if(Action_Name=="Act_Sheet_Off")
+                 else if(Action_Name=="Act Sheet Off")
                  {
                     sql="Update action_tb set act_3_status=0 where Mid='ths';";
                 }
-                 else if(Action_Name=="Act_Sheet_On")
+                 else if(Action_Name=="Act Sheet On")
                  {
                     sql="Update action_tb set act_3_status=1 where Mid='ths';";
                 
                  }
-                 else if(Action_Name=="Act_Watering_Off")
+                 else if(Action_Name=="Act Watering Off")
                  {
                     sql="Update action_tb set act_4_status=0 where Mid='ths';";
                  }
-                 else if(Action_Name=="Act_Watering_On")
+                 else if(Action_Name=="Act Watering On")
                  {
                     sql="Update action_tb set act_4_status=1 where Mid='ths';";
                  }
