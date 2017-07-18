@@ -24,7 +24,7 @@ restService.post('/Action', function(req, res) {
     var Action_Name=req.body.result;
 
                      var sql = "";
-                      var speech=Action_Name;
+                      var speech=Action_Name+"";
 
                  if(Action_Name=="Heating Bulb Off")
                  {
