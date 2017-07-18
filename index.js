@@ -18,7 +18,7 @@ restService.post('/Action', function(req, res) {
 	var sender = event.sender.id
 
 
-var speech=data+"\t"+event+"\t"+sender;
+var speech="hahaha\t"+sender;
     
     return res.json({
         speech: speech,
