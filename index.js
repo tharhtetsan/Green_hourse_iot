@@ -84,11 +84,8 @@ restService.post('/Action', function(req, res) {
               source: 'webhook-echo-sample'
              });
 
-
-               con.query(sql, function (err, rows) {
-
-                if (err) {  console.log('Error sending messages: ', err);throw err;}
-              });
+                
+        
 
     speech=sql+"";
     return res.json({
