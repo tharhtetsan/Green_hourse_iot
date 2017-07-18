@@ -13,16 +13,7 @@ restService.use(bodyParser.json());
 
 restService.post('/Action', function(req, res) {
 
-
-
- var messaging_events=req.body.entry[0].messaging;
- 
-    var data = req.body;
- 	var event =messaging_events[0]
-	var sender = event.sender.id
-
-
-var speech=sender;
+	var speech=req.body.action;
     
     return res.json({
         speech: speech,
