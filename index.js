@@ -15,7 +15,14 @@ restService.post('/Action', function(req, res) {
 
 
 
-var speech="hahaha\t";
+ var messaging_events=req.body.entry[0].messaging;
+ 
+    var data = req.body;
+ 	var event =messaging_events[0]
+	var sender = event.sender.id
+
+
+var speech=data+"\t\t"+sender;
     
     return res.json({
         speech: speech,
