@@ -2,8 +2,19 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-
+onst request = require('request')
+const mysql = require('mysql');
+var con = mysql.createConnection({
+  host: "sql12.freemysqlhosting.net",
+  user: "sql12185763",
+  password: "vKLcdcjBIM",
+  database:"sql12185"
+});
 const restService = express();
+
+
+
+
 
 restService.use(bodyParser.urlencoded({
     extended: true
@@ -71,8 +82,13 @@ restService.post('/Action', function(req, res) {
               speech: speech,
               displayText: speech,
               source: 'webhook-echo-sample'
-               });
-           }
+             });
+
+
+               con.query(sql, function (err, rows) {
+
+                if (err) {  console.log('Error sending messages: ', err);throw err;}
+              });
 
     speech=sql+"";
     return res.json({
@@ -84,7 +100,3 @@ restService.post('/Action', function(req, res) {
            
 
 });
-
-
-
-
