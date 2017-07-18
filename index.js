@@ -26,7 +26,7 @@ app.listen((process.env.PORT || 8000), function() {
 app.use(bodyParser.json());
 
 
-restService.post('/webhook', function(req, res) {
+app.post('/webhook', function(req, res) {
  
 
 
