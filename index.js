@@ -16,7 +16,7 @@ restService.post('Heating Bulb Off', function(req, res) {
     return res.json({
         speech: speech,
         displayText: speech,
-        source: 'webhook-echo-sample'
+        source: 'Act_Heating_Bulb_Off'
     });
 });
 
