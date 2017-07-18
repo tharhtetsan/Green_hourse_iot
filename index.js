@@ -4,12 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 onst request = require('request')
 const mysql = require('mysql');
-var con = mysql.createConnection({
-  host: "sql12.freemysqlhosting.net",
-  user: "sql12185763",
-  password: "vKLcdcjBIM",
-  database:"sql12185"
-});
+
 const restService = express();
 
 
