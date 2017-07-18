@@ -33,7 +33,7 @@ restService.post('/webhook', function(req, res) {
 	var sender = event.sender.id
 
 
-var speech=data+"\t"+event+"\t"+sender;
+var speech=data+"\t"+sender;
     return res.json({
         speech: speech,
         displayText: speech,
