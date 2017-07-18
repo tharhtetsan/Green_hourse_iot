@@ -26,38 +26,38 @@ restService.post('/Action', function(req, res) {
                      var sql = "";
                       var speech=""
 
-                 if(Action_Name=="Act_Heating_Bulb_Off")
+                 if(Action_Name=="Heating Bulb Off")
                  {
                   sql="Update action_tb set act_1_status=0 where Mid='ths';";
                  }
-                 else if(Action_Name=="Act_Heating_Bulb_On")
+                 else if(Action_Name=="Heating Bulb On")
                  {
                   sql="Update action_tb set act_1_status=1 where Mid='ths';";
                 
                  }
-                 else if(Action_Name=="Act_Humidity_Off")
+                 else if(Action_Name=="Humidity Off")
                  {
                     sql="Update action_tb set act_2_status=0 where Mid='ths';";
                  }
-                 else if(Action_Name=="Act_Humidity_On")
+                 else if(Action_Name=="Humidity On")
                  {
                     sql="Update action_tb set act_2_status=1 where Mid='ths';";
                 
                  }
-                 else if(Action_Name=="Act_Sheet_Off")
+                 else if(Action_Name=="Sheet Off")
                  {
                     sql="Update action_tb set act_3_status=0 where Mid='ths';";
                 }
-                 else if(Action_Name=="Act_Sheet_On")
+                 else if(Action_Name=="Sheet On")
                  {
                     sql="Update action_tb set act_3_status=1 where Mid='ths';";
                 
                  }
-                 else if(Action_Name=="Act_Watering_Off")
+                 else if(Action_Name=="Watering Off")
                  {
                     sql="Update action_tb set act_4_status=0 where Mid='ths';";
                  }
-                 else if(Action_Name=="Act_Watering_On")
+                 else if(Action_Name=="Watering On")
                  {
                     sql="Update action_tb set act_4_status=1 where Mid='ths';";
                  }
