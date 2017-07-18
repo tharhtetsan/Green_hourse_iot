@@ -13,7 +13,7 @@ restService.use(bodyParser.json());
 
 restService.post('/Action', function(req, res) {
 
-	var speech=req.body.intentName+"\t_____";
+	var speech=req.intentName+"\t_____";
     
     return res.json({
         speech: speech,
