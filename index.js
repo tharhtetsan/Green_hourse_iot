@@ -12,6 +12,7 @@ restService.use(bodyParser.urlencoded({
 restService.use(bodyParser.json());
 
 restService.post('/Action', function(req, res) {
+	var messaging_events=req.body.entry[0].messaging;
     var data = req.body;
  	var event =messaging_events[i]
 	var sender = event.sender.id
