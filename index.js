@@ -21,18 +21,6 @@ restService.post('/webhook', function(req, res) {
 });
 
 
-    return res.json({
-        speech: "speech",
-        displayText: "speech",
-        source: 'webhook-echo-sample',
-        data: {
-            "slack": slack_message
-        }
-    });
-});
-
-
-
 
 restService.listen((process.env.PORT || 8000), function() {
     console.log("Server up and listening");
