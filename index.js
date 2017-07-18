@@ -27,10 +27,7 @@ app.use(bodyParser.json());
 
 
 restService.post('/webhook', function(req, res) {
-    
-    var data = req.body;
- 	var event =messaging_events[i]
-	var sender = event.sender.id
+ 
 
 
 var speech="work";
