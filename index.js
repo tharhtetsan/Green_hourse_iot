@@ -25,6 +25,13 @@ restService.post('/Action', function(req, res) {
 
                      var sql = "";
                       var speech=eq.body.result+"\t____";
+    
+    
+       return res.json({
+              speech: speech,
+              displayText: speech,
+              source: 'webhook-echo-sample'
+               });
 
                  if(Action_Name=="Heating Bulb Off")
                  {
