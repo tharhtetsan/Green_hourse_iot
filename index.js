@@ -1,43 +1,39 @@
-
 'use strict';
 
-cconst express = require('express')
-const bodyParser = require('body-parser')
-const request = require('request')
-const mysql = require('mysql');
-const app = express();
-var con = mysql.createConnection({
-  host: "sql12.freemysqlhosting.net",
-  user: "sql12184383",
-  password: "Pqay5FrA7Z",
-	dat
+const express = require('express');
+const bodyParser = require('body-parser');
 
-app.use(bodyParser.urlencoded({
+const restService = express();
+
+restService.use(bodyParser.urlencoded({
     extended: true
 }));
 
+restService.use(bodyParser.json());
 
-
-app.listen((process.env.PORT || 8000), function() {
-    console.log("Server up and listening");
-});
-
-
-app.use(bodyParser.json());
-
-
-app.post('/webhook', function(req, res) {
- 
-
-
-var speech="work";
+restService.post('/webhook', function(req, res) {
+    var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ? req.body.result.parameters.echoText : "Seems like some problem. Speak again."
     return res.json({
         speech: speech,
         displayText: speech,
-        source: 'Act_Heating_Bulb_Off'
+        source: 'webhook-echo-sample'
+    });
+});
+
+
+    return res.json({
+        speech: "speech",
+        displayText: "speech",
+        source: 'webhook-echo-sample',
+        data: {
+            "slack": slack_message
+        }
     });
 });
 
 
 
 
+restService.listen((process.env.PORT || 8000), function() {
+    console.log("Server up and listening");
+});
