@@ -2,8 +2,7 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-onst request = require('request')
-const mysql = require('mysql');
+
 
 const restService = express();
 
